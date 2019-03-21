@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yof-8x-Vln">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Y4b-uR-6PZ">
+            <objects>
+                <viewController id="Yof-8x-Vln" customClass="HomeViewController" customModule="lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A89-Ox-Q4k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvO-Gq-JSG">
+                                <rect key="frame" x="16" y="120" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-Gp-yD8">
+                                <rect key="frame" x="16" y="208" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SY-gv-GGD">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
+                                        <state key="normal" title="Increase"/>
+                                        <connections>
+                                            <action selector="increaseClicked:" destination="Yof-8x-Vln" eventType="touchUpInside" id="3l6-6u-bDU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPe-Pi-KJs">
+                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="30"/>
+                                        <state key="normal" title="Decrease">
+                                            <color key="titleColor" red="1" green="0.16490179289315465" blue="0.068341110211344369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreasedClicked:" destination="Yof-8x-Vln" eventType="touchUpInside" id="ogw-ny-GAk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zuH-mO-DN9">
+                                <rect key="frame" x="140.5" y="302" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="Yof-8x-Vln" eventType="valueChanged" id="axF-0h-pdz"/>
+                                </connections>
+                            </stepper>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="RGl-EV-qmo">
+                                <rect key="frame" x="14" y="363" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="Yof-8x-Vln" eventType="valueChanged" id="049-Zb-gUm"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zuH-mO-DN9" firstAttribute="top" secondItem="UQo-Gp-yD8" secondAttribute="bottom" constant="64" id="01F-e5-R19"/>
+                            <constraint firstItem="UQo-Gp-yD8" firstAttribute="top" secondItem="qvO-Gq-JSG" secondAttribute="bottom" constant="16" id="6WO-ye-odR"/>
+                            <constraint firstItem="RGl-EV-qmo" firstAttribute="top" secondItem="zuH-mO-DN9" secondAttribute="bottom" constant="32" id="Dul-tp-Ltp"/>
+                            <constraint firstItem="qvO-Gq-JSG" firstAttribute="leading" secondItem="iJi-it-glb" secondAttribute="leading" constant="16" id="IER-By-A13"/>
+                            <constraint firstItem="qvO-Gq-JSG" firstAttribute="trailing" secondItem="iJi-it-glb" secondAttribute="trailing" constant="-16" id="WRJ-la-Ybg"/>
+                            <constraint firstItem="RGl-EV-qmo" firstAttribute="leading" secondItem="iJi-it-glb" secondAttribute="leading" constant="16" id="YNS-VH-bfo"/>
+                            <constraint firstItem="iJi-it-glb" firstAttribute="trailing" secondItem="UQo-Gp-yD8" secondAttribute="trailing" constant="16" id="fcQ-sB-WVz"/>
+                            <constraint firstItem="iJi-it-glb" firstAttribute="trailing" secondItem="RGl-EV-qmo" secondAttribute="trailing" constant="16" id="h3e-eB-mBF"/>
+                            <constraint firstItem="UQo-Gp-yD8" firstAttribute="leading" secondItem="iJi-it-glb" secondAttribute="leading" constant="16" id="sFl-DS-zmD"/>
+                            <constraint firstItem="zuH-mO-DN9" firstAttribute="centerX" secondItem="A89-Ox-Q4k" secondAttribute="centerX" id="uz9-lT-PQA"/>
+                            <constraint firstItem="qvO-Gq-JSG" firstAttribute="top" secondItem="iJi-it-glb" secondAttribute="top" constant="100" id="x8M-gg-8kV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iJi-it-glb"/>
+                    </view>
+                    <connections>
+                        <outlet property="steper" destination="zuH-mO-DN9" id="WSC-2P-hYc"/>
+                        <outlet property="value" destination="qvO-Gq-JSG" id="dyI-ZT-C2T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lq-ur-3k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.8" y="-2414.8425787106448"/>
+        </scene>
+    </scenes>
+</document>
