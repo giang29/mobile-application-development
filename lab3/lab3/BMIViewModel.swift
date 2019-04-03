@@ -22,7 +22,7 @@ class BMIViewModel {
         let bmi = weight * 10000 / Double(height * height)
         do {
             try calculationLocalDataStore.saveCalculation(Calculation(
-                person: Person(name: name, height: height, weight: weight),
+                person: Person(name: name, height: height, weight: weight, age: 20),
                 bmi: bmi
             ))
             let calculations = calculationLocalDataStore.getCalculations()

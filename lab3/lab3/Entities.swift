@@ -14,14 +14,16 @@ struct Calculation {
 }
 
 enum InvalidValueError: Error {
-    case invalidName, invalidHeight, invalidWeight
+    case invalidName, invalidHeight, invalidWeight, invalidAge
 }
 
 struct Person {
     private(set) var name: String
     private var height: Int
     private var weight: Double
-    init(name: String, height: Int, weight: Double) throws {
+    private(set) var age: Int
+    
+    init(name: String, height: Int, weight: Double, age: Int) throws {
         guard !name.isEmpty else {
             throw InvalidValueError.invalidName
         }
@@ -33,8 +35,34 @@ struct Person {
         guard weight <= 200 && weight >= 1.5 else {
             throw InvalidValueError.invalidWeight
         }
+        
+        guard age <= 140 && age >= 0 else {
+            throw InvalidValueError.invalidAge
+        }
         self.name = name
         self.height = height
+        self.weight = weight
+        self.age = age
+    }
+    
+    mutating func setAge(age: Int) throws {
+        guard age <= 140 && age >= 0 else {
+            throw InvalidValueError.invalidAge
+        }
+        self.age = age
+    }
+    
+    mutating func setHeight(height: Int) throws {
+        guard height <= 240 && height >= 20 else {
+            throw InvalidValueError.invalidHeight
+        }
+        self.height = height
+    }
+    
+    mutating func setWeight(weight: Double) throws {
+        guard weight <= 200 && weight >= 1.5 else {
+            throw InvalidValueError.invalidWeight
+        }
         self.weight = weight
     }
 }
