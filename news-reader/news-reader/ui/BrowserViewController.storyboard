@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lmc-lY-LMA">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser View Controller-->
+        <scene sceneID="9Kj-3C-jsW">
+            <objects>
+                <viewController id="lmc-lY-LMA" customClass="BrowserViewController" customModule="news_reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTO-mC-jRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3O-8l-rVJ">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4Z-Ke-nfx">
+                                <rect key="frame" x="10" y="30" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Riv-de-Y0p"/>
+                                    <constraint firstAttribute="height" constant="32" id="bjJ-cF-roW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <state key="disabled" image="back"/>
+                                <state key="selected" image="back"/>
+                                <state key="highlighted" image="back"/>
+                                <connections>
+                                    <action selector="backClick:" destination="lmc-lY-LMA" eventType="touchUpInside" id="zXJ-HK-auH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-1c-QRz">
+                                <rect key="frame" x="52" y="30" width="258" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TcY-1c-QRz" firstAttribute="leading" secondItem="S4Z-Ke-nfx" secondAttribute="trailing" constant="10" id="11Z-PL-h4M"/>
+                            <constraint firstItem="S4Z-Ke-nfx" firstAttribute="top" secondItem="ory-hS-MPK" secondAttribute="top" constant="10" id="3Uc-aj-cLi"/>
+                            <constraint firstItem="TcY-1c-QRz" firstAttribute="top" secondItem="S4Z-Ke-nfx" secondAttribute="top" id="6gY-jv-hZk"/>
+                            <constraint firstItem="ory-hS-MPK" firstAttribute="trailing" secondItem="U3O-8l-rVJ" secondAttribute="trailing" id="98s-Xq-Gpc"/>
+                            <constraint firstItem="S4Z-Ke-nfx" firstAttribute="leading" secondItem="ory-hS-MPK" secondAttribute="leading" constant="10" id="KeF-6T-xpF"/>
+                            <constraint firstItem="ory-hS-MPK" firstAttribute="trailing" secondItem="TcY-1c-QRz" secondAttribute="trailing" constant="10" id="Lab-9q-Hif"/>
+                            <constraint firstItem="ory-hS-MPK" firstAttribute="bottom" secondItem="U3O-8l-rVJ" secondAttribute="bottom" id="hyu-oF-A7W"/>
+                            <constraint firstItem="U3O-8l-rVJ" firstAttribute="leading" secondItem="ory-hS-MPK" secondAttribute="leading" id="m6R-As-BqI"/>
+                            <constraint firstItem="U3O-8l-rVJ" firstAttribute="top" secondItem="S4Z-Ke-nfx" secondAttribute="bottom" constant="10" id="yEt-y0-FNR"/>
+                            <constraint firstItem="TcY-1c-QRz" firstAttribute="bottom" secondItem="S4Z-Ke-nfx" secondAttribute="bottom" id="yo8-tt-p4Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ory-hS-MPK"/>
+                    </view>
+                    <connections>
+                        <outlet property="source" destination="TcY-1c-QRz" id="fAo-pn-feT"/>
+                        <outlet property="webView" destination="U3O-8l-rVJ" id="7dG-tT-eic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPK-oD-hZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.75" y="57.04225352112676"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="128" height="128"/>
+    </resources>
+</document>

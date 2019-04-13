@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="news_reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zzr-Ga-8dG">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="deF-Pe-hUl">
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="307" id="37E-58-AzR" customClass="ArticleTableViewCell" customModule="news_reader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="307"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="37E-58-AzR" id="3Bm-Z5-IQV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="306.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fWK-O5-azt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fWK-O5-azt" secondAttribute="height" multiplier="15:8" id="xz2-Tc-Pta"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneurs who use Utility Tokens to reduce CAC (Customer Acquisition Cost) will create the most valuable Security Tokens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvU-Ds-pjy">
+                                                    <rect key="frame" x="10" y="180.5" width="300" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-Ku-Jcw">
+                                                    <rect key="frame" x="10" y="206" width="300" height="54"/>
+                                                    <string key="text">TLDR. The big coming wave is Security Tokens, but the backlash against Utility Tokens is overdone. On Monday, Daily Fintech analysed the recent moves by the SEC to provide regulatory certainty to Utility Tokens. This is a big deal. Until now, entrepreneurs fa…</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="By: Bernard Lunn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-Rz-1gl">
+                                                    <rect key="frame" x="10" y="268" width="195" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izD-S7-xQH">
+                                                    <rect key="frame" x="215" y="265" width="95" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="Dailyfintech.com">
+                                                        <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sourceTapped:" destination="37E-58-AzR" eventType="touchUpInside" id="7fg-oW-gHF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="izD-S7-xQH" firstAttribute="top" secondItem="6fv-Ku-Jcw" secondAttribute="bottom" constant="5" id="4PK-OL-3yW"/>
+                                                <constraint firstAttribute="trailing" secondItem="6fv-Ku-Jcw" secondAttribute="trailing" constant="10" id="7f2-qR-Tcc"/>
+                                                <constraint firstItem="LvU-Ds-pjy" firstAttribute="top" secondItem="fWK-O5-azt" secondAttribute="bottom" constant="10" id="DQS-BW-Dsy"/>
+                                                <constraint firstItem="izD-S7-xQH" firstAttribute="leading" secondItem="iuL-Rz-1gl" secondAttribute="trailing" constant="10" id="Feu-C4-dAQ"/>
+                                                <constraint firstItem="6fv-Ku-Jcw" firstAttribute="top" secondItem="LvU-Ds-pjy" secondAttribute="bottom" constant="5" id="Fts-V2-GuZ"/>
+                                                <constraint firstItem="fWK-O5-azt" firstAttribute="leading" secondItem="3Bm-Z5-IQV" secondAttribute="leading" id="InU-XN-tGX"/>
+                                                <constraint firstAttribute="bottom" secondItem="izD-S7-xQH" secondAttribute="bottom" constant="5" id="Iwr-un-nf7"/>
+                                                <constraint firstAttribute="trailing" secondItem="LvU-Ds-pjy" secondAttribute="trailing" constant="10" id="JoV-dx-gDR"/>
+                                                <constraint firstAttribute="trailing" secondItem="izD-S7-xQH" secondAttribute="trailing" constant="10" id="iQ5-5b-fAu"/>
+                                                <constraint firstItem="iuL-Rz-1gl" firstAttribute="leading" secondItem="3Bm-Z5-IQV" secondAttribute="leading" constant="10" id="iuB-j7-DYo"/>
+                                                <constraint firstItem="iuL-Rz-1gl" firstAttribute="top" secondItem="6fv-Ku-Jcw" secondAttribute="bottom" constant="8" id="jiq-eX-BGi"/>
+                                                <constraint firstItem="6fv-Ku-Jcw" firstAttribute="leading" secondItem="3Bm-Z5-IQV" secondAttribute="leading" constant="10" id="nEO-ci-8tx"/>
+                                                <constraint firstAttribute="trailing" secondItem="fWK-O5-azt" secondAttribute="trailing" id="p9V-r0-Fw0"/>
+                                                <constraint firstItem="LvU-Ds-pjy" firstAttribute="leading" secondItem="3Bm-Z5-IQV" secondAttribute="leading" constant="10" id="tvr-ge-5vw"/>
+                                                <constraint firstItem="fWK-O5-azt" firstAttribute="top" secondItem="3Bm-Z5-IQV" secondAttribute="top" id="y1G-In-qnI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleDescription" destination="6fv-Ku-Jcw" id="KtO-1x-gB9"/>
+                                            <outlet property="articleImage" destination="fWK-O5-azt" id="Tyj-3B-FOa"/>
+                                            <outlet property="articleTitle" destination="LvU-Ds-pjy" id="xB3-Nj-enJ"/>
+                                            <outlet property="author" destination="iuL-Rz-1gl" id="Qn2-DN-bkk"/>
+                                            <outlet property="source" destination="izD-S7-xQH" id="Xtq-XC-wBe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="deF-Pe-hUl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5ac-cA-8Mg"/>
+                            <constraint firstItem="Zzr-Ga-8dG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Vo-vd-2St"/>
+                            <constraint firstItem="deF-Pe-hUl" firstAttribute="top" secondItem="Zzr-Ga-8dG" secondAttribute="bottom" id="9Q6-LB-8Lo"/>
+                            <constraint firstItem="Zzr-Ga-8dG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N2H-SQ-DVe"/>
+                            <constraint firstItem="Zzr-Ga-8dG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ciT-ZM-S2Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="deF-Pe-hUl" secondAttribute="bottom" id="iUj-1y-POe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deF-Pe-hUl" secondAttribute="trailing" id="mVC-4d-3eg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Zzr-Ga-8dG" id="E7L-4E-wCe"/>
+                        <outlet property="tableView" destination="deF-Pe-hUl" id="PLC-Gx-P6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+</document>
